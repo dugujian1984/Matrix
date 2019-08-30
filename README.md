@@ -7,7 +7,7 @@
 
 ### Project Structure
 
-- 1. OnBoardingActivity
+#### 1. OnBoardingActivity
 
 The screen where allows user to login and register as folows:
 
@@ -64,9 +64,10 @@ The screen where allows user to login and register as folows:
 </table>
 
 
-- 2. ControlPanelActivity
+#### 2. ControlPanelActivity
 
-Control Panel is the container of everything inside, including MainFragment. Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
+Control Panel is the container of everything inside, including MainFragment. 
+Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
 
 <table>
 	<tr>
@@ -109,11 +110,13 @@ Control Panel is the container of everything inside, including MainFragment. Oth
 </table>
 
 
-- 3. MainFragment
+#### 3. MainFragment
 
 Main Fragment is the main user interface, it includes several features：
 
-	- 3.1. The main feature, it shows Google Map and event on screen:
+##### 3.1. MainFragment (Main Feature)
+
+The main feature, it shows Google Map and event on screen:
 	
 <table>
     <tr>
@@ -142,7 +145,9 @@ Main Fragment is the main user interface, it includes several features：
 	
 	
 	
-	- 3.2. Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
+##### 3.2. MainFragment (Upload Event)
+
+Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
 	
 <table>
     <tr>
@@ -178,7 +183,10 @@ Main Fragment is the main user interface, it includes several features：
 </table>	
 	
 	
-	- 3.3. ReportDialog: dialog opened from MainFragment and used to display the event spec and report page. Users could switch between two page to choose the event type and data they are going to report
+##### 3.3. ReportDialog
+
+ReportDialog is dialog opened from MainFragment and used to display the event spec and report page. 
+Users could switch between two page to choose the event type and data they are going to report
 	
 <img src="/images/ToolBar.png" width="100x">
 	
@@ -216,9 +224,11 @@ Main Fragment is the main user interface, it includes several features：
 </table>	
 
 
-	- 3.4. Display Event details in BottomSheet (Click any event on screen)
+##### 3.4. MainFragment (Bottom Sheet)
+
+Display Event details in BottomSheet (Click any event on screen)
 	
-	<img src="/images/ToolBar.png" width="100x">
+<img src="/images/ToolBar.png" width="100x">
 	
 <table>
     <tr>
@@ -238,7 +248,7 @@ Main Fragment is the main user interface, it includes several features：
 </table>
 
 
-- 4. Helper Classes
+#### 4. Helper Classes
 
 <table>
     <tr>
@@ -274,7 +284,7 @@ Main Fragment is the main user interface, it includes several features：
 </table>
 
 
-- 5. Firebase Notifications
+#### 5. Firebase Notifications
 
 These files are used related to firebase cloud messaging, firebase cloud function and firebase database.
 	
