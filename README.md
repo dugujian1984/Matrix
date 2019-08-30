@@ -187,8 +187,14 @@ Open ReportDialog and take the dialog’s callback to upload Event to Firebase (
 
 ReportDialog is dialog opened from MainFragment and used to display the event spec and report page. 
 Users could switch between two page to choose the event type and data they are going to report
-	
-<img src="/images/ToolBar.png" width="100x">
+
+<table>
+	<tr>
+		<td><img src="/images/ReportEventType.png" width="200x"></td>
+		<td><img src="/images/ReportEventSpec.png" width="200x"></td>
+		<td><img src="/images/ReportEventSpecWithImg.png" width="200x"></td>
+	</tr>
+</table>	
 	
 <table>
     <tr>
@@ -228,7 +234,12 @@ Users could switch between two page to choose the event type and data they are g
 
 Display Event details in BottomSheet (Click any event on screen)
 	
-<img src="/images/ToolBar.png" width="100x">
+<table>
+	<tr>
+		<td><img src="/images/Bottom1.png" width="200x"></td>
+		<td><img src="/images/Bottom2.png" width="200x"></td>
+	</tr>
+</table>	
 	
 <table>
     <tr>
@@ -287,6 +298,12 @@ Display Event details in BottomSheet (Click any event on screen)
 #### 5. Firebase Notifications
 
 These files are used related to firebase cloud messaging, firebase cloud function and firebase database.
+
+<table>
+	<tr>
+		<td><img src="/images/Notification.png" width="200x"></td>
+	</tr>
+</table>
 	
 <table>
     <tr>
