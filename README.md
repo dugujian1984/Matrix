@@ -141,8 +141,8 @@
 		<td>Description</td> 
     </tr>
     <tr>
-        <td rowspan="4">MainFragment (Upload Event)</td>    
-        <td rowspan="4">MainFragment.java</td>  
+        <td rowspan="5">MainFragment (Upload Event)</td>    
+        <td rowspan="5">MainFragment.java</td>  
 		<td>showdialog</td> 
 		<td>Open the ReportDialog</td>  		
     </tr>
@@ -159,10 +159,11 @@
 		<td>Take the callback and data from ReportDialog and uploadEvent</td>  
     </tr>
 	<tr>
-        <td> interface DialogCallBack {
-				void onSubmit(String editString, String event_type);
-				void startCamera();
-			}
+        <td> 
+			<br/>interface DialogCallBack {
+			<br/>    void onSubmit(String editString, String event_type);
+			<br/>    void startCamera();
+			<br/>}
 		</td>  
 		<td>MainFragment’s callback listener from ReportDialog</td>  
     </tr>
