@@ -7,7 +7,7 @@
 
 ### Project Structure
 
-- 1. OnBoardingActivity
+1. OnBoardingActivity
 
 	The screen where allows user to login and register as folows:
 
@@ -60,12 +60,14 @@
 </table>
 
 
-- 2. ControlPanelActivity
+
+
+2. ControlPanelActivity
 
 	Control Panel is the container of everything inside, including MainFragment. Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
 
-<img src="/images/ToolBar.PNG" width="100x">
-<img src="/images/NavigationView.PNG" width="100x">
+<img src="/images/ToolBar.png" width="100x">
+<img src="/images/NavigationView.png" width="100x">
 
 
 <table>
@@ -101,10 +103,11 @@
     </tr>
 </table>
 
-- 3. MainFragment
+
+3. MainFragment
 
 	Main Fragment is the main user interface, it includes several features：
-	- 3.1. The main feature, it shows Google Map and event on screen:
+	3.1. The main feature, it shows Google Map and event on screen:
 	
 <table>
     <tr>
@@ -131,36 +134,40 @@
     </tr>
 </table>
 	
-	- 3.2. Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
+	
+	
+	3.2. Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
 	
 <table>
     <tr>
         <td>Part</td> 
-        <td>Files Related</td> 
-		<td>Functions Related</td> 
+        <td>Files/Functions Related</td> 
 		<td>Description</td> 
     </tr>
     <tr>
-        <td rowspan="5">MainFragment (Upload Event)</td>    
-        <td rowspan="5">MainFragment.java</td>  
-		<td>showdialog</td> 
+        <td rowspan="6">MainFragment (Upload Event)</td>    
+        <td>MainFragment.java</td>  
+		<td>Main Fragment contains Upload Event Feature</td>  		
+    </tr>
+    <tr>
+		<td>-- showdialog</td> 
 		<td>Open the ReportDialog</td>  		
     </tr>
     <tr>
-        <td>askSpeechInput</td>  
+        <td>-- askSpeechInput</td>  
 		<td>Open the system speech recognition</td>  
     </tr>
 	<tr>
-        <td>startCamer</td>  
+        <td>-- startCamer</td>  
 		<td>Take the callback from ReportDialog and open the camera</td>  
     </tr>
 	<tr>
-        <td>onSubmit and uploadImage</td>  
+        <td>-- onSubmit and uploadImage</td>  
 		<td>Take the callback and data from ReportDialog and uploadEvent</td>  
     </tr>
 	<tr>
         <td> 
-			<br/>interface DialogCallBack {
+			<br/>-- interface DialogCallBack {
 			<br/>    void onSubmit(String editString, String event_type);
 			<br/>    void startCamera();
 			<br/>}
@@ -169,3 +176,120 @@
     </tr>
 </table>	
 	
+	
+	3.3. ReportDialog: dialog opened from MainFragment and used to display the event spec and report page. Users could switch between two page to choose the event type and data they are going to report
+	
+	<img src="/images/ToolBar.png" width="100x">
+	
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="6">ReportDialog</td>
+		<td>res/layout/dialog.xml</td> 
+		<td>The top level of the reportdialog’s UI</td>  		
+    </tr>
+    <tr>
+        <td>res/values/styles.xml</td>  
+		<td>It defines the style of the dialog</td>  
+    </tr>
+	<tr>
+        <td>res/layout/report_event_type.xml</td>  
+		<td>The first page of upload event, set event type</td>  
+    </tr>
+	<tr>
+        <td>res/layout/report_event_spec.xml</td>  
+		<td>The second page of upload event, set event details</td>  
+    </tr>
+	<tr>
+        <td>ReportRecyclerViewAdapter.java</td>  
+		<td>Recycler view adapter for setting up event type</td>  
+    </tr>
+	<tr>
+        <td>res/layout/recyclerview_item.xml</td>  
+		<td>Recycler view child view that is going to adapt to recycler view</td>  
+    </tr>
+</table>	
+
+
+	3.4. Display Event details in BottomSheet (Click any event on screen)
+	
+	<img src="/images/ToolBar.png" width="100x">
+	
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="2">MainFragment (Bottom Sheet)</td>
+		<td>MainFragment.java</td> 
+		<td>Main Fragment contains Upload Bottom Sheet</td>  		
+    </tr>
+    <tr>
+        <td>res/layout/fragment_main.xml</td>  
+		<td>Nested layout (Id: nestedScrollView), this is the bottom Sheet layout container</td>  
+    </tr>
+</table>
+
+
+4. Helper Classes
+
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="6">Helper</td>
+		<td>Item.java</td> 
+		<td>Holds all item attributes, this is used to show ReportRecyclerViewAdapter</td>  		
+    </tr>
+    <tr>
+        <td>TrafficEvent.java</td>  
+		<td>Holds all traffic event attributes</td>  
+    </tr>
+	<tr>
+        <td>User.java</td>  
+		<td>Holds all user attributes</td>  
+    </tr>
+	<tr>
+        <td>LocationTracker.java</td>  
+		<td>Get longitude and latitude of current location</td>  
+    </tr>
+	<tr>
+        <td>Config.java</td>  
+		<td>Temperary Configurations</td>  
+    </tr>
+	<tr>
+        <td>Utils.java</td>  
+		<td>Store util functions</td>  
+    </tr>
+</table>
+
+
+5. Firebase Notifications
+
+	These files are used related to firebase cloud messaging, firebase cloud function and firebase database.
+	
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="2">Firebase Cloud Messaging</td>
+		<td>MyFirebaseMessagingService.java</td> 
+		<td>Main Receiver of Firebase Cloud Messaging</td>  		
+    </tr>
+    <tr>
+        <td>MatrixApplication.java</td>  
+		<td>Help to register Firebase Cloud Messaging token when application boots</td>  
+    </tr>
+</table>
