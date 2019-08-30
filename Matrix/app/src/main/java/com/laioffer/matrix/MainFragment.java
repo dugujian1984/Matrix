@@ -381,7 +381,8 @@ public class MainFragment extends Fragment implements OnMapReadyCallback, Report
                         for (int i = 0; i < listItems.size(); i++) {
                             final String label = listItems.get(i).getDrawable_label();
                             if (sentence.toLowerCase().contains(label.toLowerCase())) {
-                                Toast.makeText(getContext(), sentence, Toast.LENGTH_LONG).show();
+                                // Toast.makeText(getContext(), sentence, Toast.LENGTH_LONG).show();
+                                showDialog(label, sentence);
                                 isMatch = true;
                                 break;
                             }
@@ -523,7 +524,6 @@ public class MainFragment extends Fragment implements OnMapReadyCallback, Report
                     Bitmap bitmap = Utils.getBitmapFromURL(url);
                     return bitmap;
                 }
-
                 @Override
                 protected void onPostExecute(Bitmap bitmap) {
                     super.onPostExecute(bitmap);
