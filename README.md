@@ -143,11 +143,17 @@ The main feature, it shows Google Map and event on screen:
     </tr>
 </table>
 	
-	
-	
+		
 ##### 3.2. MainFragment (Upload Event)
 
 Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
+
+<table>
+	<tr>
+		<td><img src="/images/MainFragment.png" width="200x"></td>
+		<td><img src="/images/SpeechInput.png" width="200x"></td>
+	</tr>
+</table>
 	
 <table>
     <tr>
