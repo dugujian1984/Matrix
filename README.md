@@ -8,9 +8,11 @@
 ### Project Structure
 
 1. OnBoardingActivity
-... The screen where allows user to login and register
 
-<img src="/images/Capture.PNG" width="700x">
+... The screen where allows user to login and register as folows:
+
+<img src="/images/Login.PNG" width="100x">
+<img src="/images/Register.PNG" width="100x">
 
 <table>
     <tr>
@@ -54,5 +56,48 @@
 	<tr>
         <td>res/layout/fragment_login.xml</td>  
 		<td>RegisterFragment’s layout file</td>
+    </tr>
+</table>
+
+
+2. ControlPanelActivity
+
+... Control Panel is the container of everything inside, including MainFragment. 
+Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
+
+<img src="/images/ToolBar.PNG" width="100x">
+<img src="/images/NavigationView.PNG" width="100x">
+
+
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="2">Toolbar</td>    
+        <td>ControlPanel.java</td>  
+		<td>ControlPanel includes Toolbar</td>  
+    </tr>
+    <tr>
+        <td>res/layout/activity_control_panel.xml</td>  
+		<td>ControlPanel includes Toolbar</td>  
+    </tr>
+	<tr>
+		<td rowspan="4">NavigationView</td> 
+        <td>ControlPanel.java</td>  
+		<td>ControlPanel includes NavigationView</td>  
+    </tr>
+	<tr>
+        <td>res/layout/activity_control_panel.xml</td>  
+		<td>ControlPanel includes NavigationView</td>  
+    </tr>
+        <td>res/layout/nav_header.xml</td>  
+		<td>The layout of navigationview header, at the top</td>  
+    </tr>
+	<tr>
+        <td>res/menu/drawer_view.xml</td>  
+		<td>The menu item below navigationvie header, includes settings & homes</td>
     </tr>
 </table>
