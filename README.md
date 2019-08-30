@@ -7,11 +7,11 @@
 
 ### Project Structure
 
-1. OnBoardingActivity
+- 1. OnBoardingActivity
 
-... The screen where allows user to login and register as folows:
+	The screen where allows user to login and register as folows:
 
-<img src="/images/Login.PNG" width="100x">
+<img src="/images/Login.PNG">
 <img src="/images/Register.PNG" width="100x">
 
 <table>
@@ -60,10 +60,9 @@
 </table>
 
 
-2. ControlPanelActivity
+- 2. ControlPanelActivity
 
-... Control Panel is the container of everything inside, including MainFragment. 
-Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
+	Control Panel is the container of everything inside, including MainFragment. Other than that Fragments, ControlPanel also contains ToolBar and Navigation View
 
 <img src="/images/ToolBar.PNG" width="100x">
 <img src="/images/NavigationView.PNG" width="100x">
@@ -101,3 +100,71 @@ Other than that Fragments, ControlPanel also contains ToolBar and Navigation Vie
 		<td>The menu item below navigationvie header, includes settings & homes</td>
     </tr>
 </table>
+
+- 3. MainFragment
+
+	Main Fragment is the main user interface, it includes several features：
+	- 3.1. The main feature, it shows Google Map and event on screen:
+	
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="4">MainFragment (Main Feature)</td>    
+        <td>ControlPanel.java</td>  
+		<td>ControlPanel contains MainFragment</td>  
+    </tr>
+    <tr>
+        <td>MainFragment.java</td>  
+		<td>Main Fragment logic java file</td>  
+    </tr>
+	<tr>
+        <td>res/layout/fragment_main.xml</td>  
+		<td>Main Fragment main UI container</td>  
+    </tr>
+	<tr>
+        <td>res/raw/style_json</td>  
+		<td>Styling Google map</td>  
+    </tr>
+</table>
+	
+	- 3.2. Open ReportDialog and take the dialog’s callback to upload Event to Firebase (Click button on right-bottom corner of picture above)
+	
+<table>
+    <tr>
+        <td>Part</td> 
+        <td>Files Related</td> 
+		<td>Functions Related</td> 
+		<td>Description</td> 
+    </tr>
+    <tr>
+        <td rowspan="4">MainFragment (Upload Event)</td>    
+        <td rowspan="4">MainFragment.java</td>  
+		<td>showdialog</td> 
+		<td>Open the ReportDialog</td>  		
+    </tr>
+    <tr>
+        <td>askSpeechInput</td>  
+		<td>Open the system speech recognition</td>  
+    </tr>
+	<tr>
+        <td>startCamer</td>  
+		<td>Take the callback from ReportDialog and open the camera</td>  
+    </tr>
+	<tr>
+        <td>onSubmit and uploadImage</td>  
+		<td>Take the callback and data from ReportDialog and uploadEvent</td>  
+    </tr>
+	<tr>
+        <td> interface DialogCallBack {
+				void onSubmit(String editString, String event_type);
+				void startCamera();
+			}
+		</td>  
+		<td>MainFragment’s callback listener from ReportDialog</td>  
+    </tr>
+</table>	
+	
